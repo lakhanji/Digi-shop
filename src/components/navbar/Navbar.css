@@ -1,0 +1,108 @@
+/* General Navbar Styling */
+.navbar {
+    background-color: #1b1646; /* Dark background color */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.navbar-logo {
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem; /* Font size for the logo */
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-logo:hover {
+    color: #23e02d; /* Bright green on hover */
+}
+
+/* Navigation Links */
+.nav-list {
+    display: flex;
+    flex-direction: row; /* Default for larger screens */
+    gap: 16px; /* Space between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-list li a:hover {
+    color: #fbb6ce; /* Lighter pink on hover */
+}
+
+/* Buttons */
+.button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #23e02d; /* Bright green for button background */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1a8a17; /* Darker green on hover */
+    transform: scale(1.05); /* Slight enlargement for hover effect */
+}
+
+/* Search Bar */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-bar {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #23e02d; /* Highlighted border color */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 12px; /* Smaller gap for stacked links */
+        width: 100%;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 16px;
+    }
+}
